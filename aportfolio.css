@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@font-face {
+    font-family: 'LogoFont';
+    src: url(./fonts/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NameFont';
+    src: url(./fonts/Indie_Flower/IndieFlower-Regular.ttf) format('truetype');
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -12,13 +19,6 @@ body{
     position: relative;
 }
 
-@keyframes text {
-    to{
-        background-position: 200%;
-    }
-}
-
-/* container */
 .container{
     margin: 0 auto;
     max-width: 1300px;
@@ -26,10 +26,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-/* container end */
 
-
-/* video */
 
 video{
     width: 100%;
@@ -42,12 +39,10 @@ video{
     z-index: -10000;
 }
 
-/* video end */
 
 
+/* navbar ------------------------------- */
 
-
-/* header */
 header{
     position: fixed;
     width: 100%;
@@ -70,7 +65,7 @@ header{
     text-decoration: none;
 }
 .navbar_left h1{
-    font-family: "Momo Trust Display", sans-serif;
+    font-family: "LogoFont";
     font-size: 40px;
     font-weight: 700;
     text-align: center;
@@ -98,7 +93,7 @@ header{
     backdrop-filter: blur(15px);
 }
 .navbar_right li a{
-    font-family: "Momo Trust Display", sans-serif;
+    font-family: "LogoFont";
     font-size: 20px;
     font-weight: 700;
     text-align: center;
@@ -136,11 +131,9 @@ header{
 #menu_btn:active, #x_btn:active{
     background: rgba(0, 255, 255, 0.452);
 }
-/* header */
 
 
 
-/* header media */
 
 @media screen and (max-width: 730px) {
     .navbar_right #navbar_list {
@@ -190,9 +183,9 @@ header{
     }
 }
 
-/* header media end */
+/* navbar end------------------------------- */
 
-/* main */
+
 
 main{
     width: 100%;
@@ -201,15 +194,16 @@ main{
     align-items: center;
     justify-content: center;
 }
+/* home------------------------------------------- */
 
-section{
-    width: 100%;
+
+
+.home-section{
+    width: 90%;
+    margin-top: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.home-section{
-    margin-top: 80px;
 }
 .home-section .home-text{
     display: flex;
@@ -230,7 +224,7 @@ section{
 }
 .home-section h1{
     font-size: 4.5rem;
-    font-family: "Indie Flower", sans-serif;
+    font-family: "NameFont";
     font-weight: 900;
     background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
     background-size: 200%;
@@ -246,18 +240,22 @@ section{
     font-weight: 600;
 }
 .home-section h3 span{
-    color: #c366ff;
+    font-size: 3rem;
+    color: aqua;
+    text-shadow: 0px 0px 20px aqua;
 }
 .home-section p{
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 1.2;
     font-family: sans-serif;
     color: #cccccca9;
 }
 .apps{
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 20px;
 }
 .icons{
     width: 50px;
@@ -269,6 +267,9 @@ section{
     transition: 0.5s ease;
 }
 
+.icons:hover{
+    transform: scale(1.1);
+}
 .icons:active{
     transform: scale(1.0);
 }
@@ -276,23 +277,123 @@ section{
     background: linear-gradient(to right, #10171f, #06171a, #081127, #121c2c, #232930);
     background-size: 200%;    
     animation: text 5s linear infinite;
+    box-shadow: 0px 0px 20px rgb(83, 83, 83);
+}
+.github:active{
+    background: rgb(0, 0, 0);
+    transition: 0s;
 }
 .telegram{
-    background: linear-gradient(to right, #72b4ff, #68e8ff, #487bff, #68a4ff, #72afff);
+    background: linear-gradient(to right, #68e8ff,#72b4ff, #789dfc, #68a4ff, #64a7ff);
     background-size: 200%;    
     animation: text 5s linear infinite;
+    box-shadow: 0px 0px 20px #3b90ff;
 }
-
+.telegram:active{
+    background: #3b90ff;
+    transition: 0s;
+}
 .instagram{
     background: linear-gradient(to right, #f66af8, #b92bf1, #e649f5, #ec39ec, #d744da);
     background-size: 200%;    
     animation: text 5s linear infinite;
+    box-shadow: 0px 0px 20px rgb(255, 4, 234);
 }
-
+.instagram:active{
+    background: rgb(255, 4, 234);
+    transition: 0s;
+}
 .whatsApp{
     background: linear-gradient(to right, #84ffa9, #44ff5d, #23f78d, #2cf787, #3eee2e);
-    background-size: 200%;    
+    background-size: 200%;
+    box-shadow: 0px 0px 20px rgb(0, 255, 0);
     animation: text 5s linear infinite;
 }
+.whatsApp:active{
+    background: rgb(0, 255, 0);
+    transition: 0s;
+}
 
-/* main end */
+.home-section #download-cv{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(200, 82, 255);
+    color: #ffffff;
+    outline: none;
+    font-size: 20px;
+    box-shadow: 0px 0px 20px rgb(200, 82, 255);
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 700;
+}
+#download-cv:hover{
+    transform: scale(1.1);
+    box-shadow: -10px 5px 15px rgba(200, 82, 255, 0.534);
+}
+#download-cv:active{
+    transform: scale(1.0);
+    background: rgb(174, 0, 255);
+}
+
+.home-img{
+    width: 450px;
+    height: 450px;
+    border-radius: 70% 30% 31% 69% / 76% 71% 29% 24%;
+    overflow: hidden;
+}
+.home-img img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+@media screen and (max-width: 1050px) {
+    html{
+        font-size: 70%;
+    }
+    .home-img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .home-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+    .home-img{
+        width: 350px;
+        height: 350px;
+    }
+    
+}
+@media screen and (max-width: 380px) {
+    .home-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+    .home-img{
+        width: 300px;
+        height: 300px;
+    }
+    
+}
+
+/* home page end------------------------------------------- */
+
+
+
+@keyframes text {
+    to{
+        background-position: 200%;
+    }
+}
