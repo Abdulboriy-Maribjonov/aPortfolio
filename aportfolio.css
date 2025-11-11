@@ -22,9 +22,6 @@ body{
 .container{
     margin: 0 auto;
     max-width: 1300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -39,7 +36,11 @@ video{
     z-index: -10000;
 }
 
-
+@keyframes text {
+    to{
+        background-position: 200%;
+    }
+}
 
 /* navbar ------------------------------- */
 
@@ -315,7 +316,7 @@ main{
 }
 
 .home-section #download-cv{
-    margin-top: 20px;
+    margin-top: 40px;
     width: 200px;
     height: 50px;
     border-radius: 25px;
@@ -336,15 +337,16 @@ main{
 #download-cv:active{
     transform: scale(1.0);
     background: rgb(174, 0, 255);
+    transition: 0s;
 }
 
-.home-img{
+.my-img{
     width: 450px;
     height: 450px;
     border-radius: 70% 30% 31% 69% / 76% 71% 29% 24%;
     overflow: hidden;
 }
-.home-img img{
+.my-img img{
     width: 100%;
     height: 100%;
     background-position: center;
@@ -354,7 +356,7 @@ main{
     html{
         font-size: 70%;
     }
-    .home-img{
+    .my-img{
         width: 300px;
         height: 300px;
     }
@@ -364,24 +366,17 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         row-gap: 40px;
     }
-    .home-img{
+    .my-img{
         width: 350px;
         height: 350px;
     }
     
 }
 @media screen and (max-width: 380px) {
-    .home-section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column-reverse;
-        row-gap: 40px;
-    }
-    .home-img{
+    .my-img{
         width: 300px;
         height: 300px;
     }
@@ -390,10 +385,112 @@ main{
 
 /* home page end------------------------------------------- */
 
+/* about page-------------------------------- */
+
+.about-section{
+    width: 90%;
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: sans-serif;
+    column-gap: 10px;
+}
+.about-section h1{
+    margin-bottom: 50px;
+    font-size: 3rem;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 5s linear infinite;
+    text-shadow: 0px 0px 20px rgb(253, 16, 253);
+}
+.about-section h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.about-section p{
+    font-size: 1.2rem;
+    color: #cccccca9;
+}
 
 
-@keyframes text {
-    to{
-        background-position: 200%;
+.about-section #show-more{
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(200, 82, 255);
+    color: #ffffff;
+    outline: none;
+    font-size: 20px;
+    box-shadow: 0px 0px 20px rgb(200, 82, 255);
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 700;
+}
+#show-more:hover{
+    transform: scale(1.1);
+    box-shadow: -10px 5px 15px rgba(200, 82, 255, 0.534);
+}
+#show-more:active{
+    transform: scale(1.0);
+    background: rgb(174, 0, 255);
+    transition: 0s;
+}
+
+.show-text{
+    position: fixed;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,50%);
+    margin: 0 auto;
+    width: 80%;
+    height: 500px;
+    background: rgba(82, 81, 81, 0.308);
+    backdrop-filter: blur(20px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition-delay: 3s;
+}
+.show-text p{
+    width: 80%;
+    color: #e7e7e7c4;
+    font-size: 1.4rem;
+}
+#close-text{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#close-text img{
+    width: 100%;
+    height: 100%;
+}
+.show-text-active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 940px) {
+    .about-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .my-img2{
+        margin-top: 30px;
     }
 }
+/* about page end-------------------------------- */
