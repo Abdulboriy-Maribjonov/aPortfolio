@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aPortfolio</title>
     <link rel="stylesheet" href="./aportfolio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <video src="./video/portfoli_bg.mp4" autoplay loop muted></video>
@@ -36,7 +37,7 @@
             <h3>And I'm a <span>Frontend Developer</span></h3>
             <p>Follow me on</p>
             <div class="apps">
-                <a href="#" class="icons github">
+                <a href="https://github.com/Abdulboriy-Maribjonov" class="icons github">
                     <img src="./img/github.png" alt="">
                 </a>
                 <a href="#" class="icons telegram">
@@ -51,7 +52,7 @@
             </div>
             <button id="download-cv">Download CV</button>
         </div>
-        <div class="my-img">
+        <div class="my-img my-img1">
             <img src="./img/My-img.jpg" alt="My photo">
         </div>
        </section>
@@ -67,7 +68,9 @@
                 In 2024, I began my journey into the world of <br> frontend development at Digital City in Andijan, where I immersed myself in <br> modern  web technologies and design principles. After a year of hard work and dedication, <br> I successfully completed my studies in 2025.
                 Throughout my learning experience, <br> I discovered a true passion for building clean, responsive, and visually appealing <br> websites. I enjoy turning creative....
             </p>
-            <div id="show-text" class="show-text">
+            <button id="show-more">Show more</button>
+        </div>
+        <div id="show-text" class="show-text">
                 <div id="close-text">
                     <img src="./img/x.png" alt="">
                 </div>
@@ -83,8 +86,47 @@
                     In my free time, I like learning new things, experimenting with design concepts, and staying inspired by innovative projects from around the world.
                 </p>
             </div>
-            <button id="show-more">Show more</button>
-        </div>
+       </section>
+       
+       <section class="skills-section container" id="skills">
+        <h1 class="skills-title">Skills</h1>
+        <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./img/html.png" alt="html">
+      </div>
+      <div class="swiper-slide">
+        <img src="./img/css.png" alt="css">
+      </div>
+      <div class="swiper-slide">
+        <img src="./img/javascript.png" alt="javascript">
+      </div>
+      <div class="swiper-slide">
+        <h1>Bootstrapt</h1>
+        <img src="./img/bootstrapt.png" alt="bootstrapt">
+      </div>
+      <div class="swiper-slide">
+        <h1>Talwind</h1>
+        <img src="./img/talwind.png" alt="talwind">
+      </div>
+      <div class="swiper-slide">
+        <h1>React</h1>
+        <img src="./img/react.png" alt="react">
+      </div>
+      <div class="swiper-slide">
+        <h1>ViteReact</h1>
+        <img src="./img/viteReact.png" alt="viteReact">
+      </div>
+      <div class="swiper-slide">
+        <h1>MaterialUi</h1>
+        <img src="./img/materalUi.png" alt="materialUi">
+      </div>
+      <div class="swiper-slide">
+        <h1>Swiper</h1>
+        <img src="./img/swiper.png" alt="swiper">
+      </div>
+    </div>
+  </div>
        </section>
     </main>
 
@@ -98,5 +140,12 @@
 
 
     <script src="aportfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
 </body>
 </html>
