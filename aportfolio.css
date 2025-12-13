@@ -513,12 +513,13 @@ main{
 /* skills page----------------------------------- */
 
 .skills-section{
-    margin-top: 200px;
+    margin-top: 300px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    scroll-margin-top: 200px;
 }
 .skills-title{
     margin-bottom: 50px;
@@ -734,3 +735,17 @@ main{
 .swiper-pagination{
     bottom: -80px !important;
 }
+
+
+
+
+/* Contact section --------------------------------------- */
+
+
+
+
+
+
+
+
+/* Contact section  end--------------------------------------- */
