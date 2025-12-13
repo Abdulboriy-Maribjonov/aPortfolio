@@ -22,3 +22,13 @@ showBtn.addEventListener("click", ()=>{
 closeTxtBtn.addEventListener("click", ()=>{
     showText.classList.remove("show-text-active")
 })
+
+document.querySelectorAll('.swiper-slide').forEach(slide => {
+  slide.addEventListener('mouseenter', () => {
+    swiper.autoplay.stop();
+  });
+
+  slide.addEventListener('mouseleave', () => {
+    swiper.autoplay.start();
+  });
+});

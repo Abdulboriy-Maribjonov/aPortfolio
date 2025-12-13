@@ -632,8 +632,9 @@ main{
 /* works section------------------------------- */
 
 .works-section{
-    margin-top: 200px;
+    margin-top: 350px;
     width: 90%;
+    height: 700px;
     scroll-margin-top: 200px;
 }
 
@@ -646,21 +647,87 @@ main{
 
 .swiper {
     width: 100%;
-    height: 400px;
+    height: 630px;
+    background: transparent;
 }
 
 .swiper-slide {
-    width: 100%;
+    width: 300px;
     height: 100%;
     text-align: center;
     font-size: 18px;
-    background: #444;
+    background: rgba(255, 255, 255, 0.267);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 }
 
 .swiper {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.swiper-slide h1{
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    color: white;
+}
+.swiper-slide p{
+    font-family: sans-serif;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: white;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.swiper-slide p span{
+    position: absolute;
+    bottom: 50px;
+}
+
+
+
+.swiper-slide a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.384);
+}
+
+.swiper-slide a:nth-child( odd ) {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.swiper-slide a:nth-child( even ) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.swiper-slide a:active{
+    background: rgba(255, 255, 255, 0.521);
+}
+.swiper-pagination{
+    bottom: -50px !important;
 }
